@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crime Detection</title>
+  <style>
+
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: red; /* Changed background color to red */
+      text-align: right; /* Right alignment */
+    }
+
+    ul.navbar li {
+      display: inline-block; /* Display navigation items inline */
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #111;
+    }
+
+    /* Rest of the existing styles */
+
+    body {
+      background-image: url('https://img.freepik.com/free-photo/grunge-scratched-cracked-texture-background_1048-15879.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .image-container {
+      position: absolute;
+      top: 80px;
+      left: 40px;
+      width: 660px;
+      height: 80vh;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtAOJy8AHO1iMOY6OWpIrRyzZWM3f18z0zpA&usqp=CAU');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content-container {
+      position: relative;
+      padding: 20px;
+      margin-left: 320px;
+      text-align: right;
+      color: white;
+    }
+
+    .crime-detection {
+      position: relative;
+      top: 200px;
+      right: 500px;
+      padding: 10px;
+    }
+
+    .crime {
+      font-size: 100px;
+      font-weight: bold;
+      color: yellow;
+      margin: 0;
+    }
+
+    .detection {
+      font-size: 60px;
+      color: yellow;
+      margin: 0;
+    }
+
+    .text-content {
+      color: white;
+      font-size: 35px;
+      padding: 20px;
+      margin-top: 180px;
+      margin-left: 250px;
+      text-align: right;
+    }
+
+  </style>
+</head>
+<body>
+
+  <ul class="navbar">
+    <li><a href="#">Home</a></li>
+    <li><a href="/prediction">Predict</a></li>
+  </ul>
+
+  <div class="image-container"></div>
+  <div class="content-container">
+    <div class="crime-detection">
+      <h1 class="crime">Crime</h1>
+      <h2 class="detection">Detection</h2>
+    </div>
+    <div class="text-content">
+      <p>Crime is increasing in India at an alarming rate. With the help of Artificial Intelligence, we can efficiently detect and classify crimes directly from CCTV footage.</p>
+    </div>
+    <a href="{{ url_for('prediction') }}">
+      <button type="button" class="button">Click to predict crime</button>
+    </a>
+  </div>
+</body>
+</html>

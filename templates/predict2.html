@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detect And Predict Crime</title>
+  <style>
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: red;
+      text-align: right;
+    }
+
+    ul.navbar li {
+      display: inline-block;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #111;
+      color: white;
+    }
+
+    body {
+      background-image: url('https://img.freepik.com/free-photo/grunge-scratched-cracked-texture-background_1048-15879.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-family: 'Impact', sans-serif;
+      color: yellow;
+      font-weight: lighter;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 24px;
+      font-family: 'Verdana', sans-serif;
+      color: white;
+      margin-top: 30px;
+    }
+
+    .upload-btn {
+      display: inline-block;
+      margin-top: 30px;
+    }
+
+    .upload-btn input[type="file"] {
+      display: none;
+    }
+
+    .upload-btn label {
+      font-family: 'Verdana', sans-serif;
+      font-size: 18px;
+      padding: 15px 30px;
+      background-color: #001f3f; /* Dark blue */
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="home2.html">Home</a></li>
+<!--    <li><a href="predict2.html">Predict</a></li>-->
+      <li><a href="#">Predict</a></li>
+  </ul>
+  <h1 style="color: yellow; font-size: 60px;">Detect and Classify The Crime</h1>
+  <form action="/predict" method="post" enctype="multipart/form-data">
+    <div class="prediction"
+      <p style="font-size: 28px;">Upload the image to detect crime!</p>
+      <div class="upload-btn">
+        <input type="file" id="imageUpload" accept="image/*">
+        <label for="imageUpload">Upload Image</label>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
